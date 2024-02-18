@@ -2,7 +2,6 @@ import { config } from 'dotenv';
 config();
 
 import { Module } from '@nestjs/common';
-import { AppService } from './app.service';
 import { TelegrafModule } from 'nestjs-telegraf';
 import { AppUpdate } from './app.update';
 
@@ -21,6 +20,6 @@ import { AppUpdate } from './app.update';
       },
     }),
   ],
-  providers: [AppService, AppUpdate],
+  providers: [AppUpdate],
 })
 export class AppModule {}
